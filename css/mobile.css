@@ -1,0 +1,70 @@
+@media (max-width: 880px) {
+    body {
+        font-size: 100%;
+    }
+
+    .header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 20px 0;
+    }
+
+    .logo {
+        margin: 0;
+    }
+
+/*---- Hamburger --*/
+    #btn-mobile {
+        display: flex;
+        border: none;
+        background: none;
+        cursor: pointer;
+        align-items: center;
+    }
+
+    .menu {
+        display: block;
+        background-color: #f7f7f7;
+        position: absolute;
+        width: 40%;
+        top: 60px;
+        right: 15px;
+        flex-direction: column;
+        gap: 0;  
+        z-index: 1000; 
+        visibility: hidden;
+        text-align: left;     
+    }
+
+    .menu li {
+        width: 0;
+    }
+
+    #nav.active .menu {
+        visibility: visible;
+    }
+
+/*---- Conteúdo --*/
+    .grid {
+        grid-template-columns: 1fr;
+    }
+
+    .subtitle, .detach {
+        max-width: 100vw;
+        padding: 15px 10px;
+    }
+
+    .img-bike{
+        max-width: 100vw;
+    }
+
+    .detach h2 {
+        font-size: 3rem;
+        text-align: center;
+    }
+
+    .subtitle p {
+        text-align: left;
+    }
+}
