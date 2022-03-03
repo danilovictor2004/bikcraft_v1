@@ -8,5 +8,3 @@ const menuList = document.querySelector('.menu');
 menuList.addEventListener('click', () => {
     nav.classList.toggle('active');
 });
-
----dd
