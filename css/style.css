@@ -1,4 +1,24 @@
 /*---- Geral --*/
+:root {
+    --color-primary: #ee2211;
+    --color-secondary: #900;
+    --color-background-dark: #F7F7F7;
+    --color-background-light: #FFFFFF;
+    --color-text: #000000;
+    --color-text-subtitle: rgba(0,0,0,0.2);
+    --img-onda: url('../img/onda-clara.svg'); 
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --color-background-dark: #111111;
+        --color-background-light: #000000;
+        --color-text: #FFFFFF;
+        --color-text-subtitle: rgba(255,255,255,0.2);
+        --img-onda: url('../img/onda-escura.svg'); 
+    }
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -13,7 +33,7 @@
 
 body {
     font-family: Arial, Helvetica, sans-serif;
-    background-color: #f7f7f7;
+    background-color: var(--color-background-dark);
 }
 
 p {
@@ -43,7 +63,7 @@ p {
 }
 
 .menu li{
-    background-color: #ffffff;
+    background-color: var(--color-background-light);
     border-radius: 4px;
     width: 10rem;
     text-align: center;
@@ -51,7 +71,7 @@ p {
 
 .menu a {
     display: block;
-    color: #000;  
+    color: var(--color-text);  
     text-decoration: none;
     text-transform: uppercase; 
     padding: 0.625rem 1.25rem; 
@@ -74,11 +94,12 @@ p {
 }
 
 .grid section:nth-child(3n + 1){
-    background-color: #FFF;
+    background-color: var(--color-background-light);
 }
 
 /*---- Subtítulo --*/
 .subtitle {
+    color: var(--color-text);
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
@@ -100,8 +121,8 @@ p {
 }
 
 .button {
-    background-color: #ee2211;
-    color: #FFF;
+    background-color: var(--color-primary);
+    color: #FFFFFF;
     text-decoration: none;
     text-align: end;
     padding: 0.938rem 1.875rem;
@@ -126,16 +147,18 @@ p {
     flex-direction: column;
     justify-content: center;
     padding: 1.25rem;
+    background-image: var(--img-onda); 
 }
 
 .detach h2{
     font-size: 4rem;
-    color: #c6c6c6;
+    color: var(--color-text-subtitle);
     text-align: end;
 }
 
 /*----Descrição --*/
 .descriptions{
+    color: var(--color-text);
     list-style: none;
     display: flex;
     flex-direction: column;
@@ -148,11 +171,11 @@ p {
 }
 
 .description-item:hover {
-    border-left: 5px solid #ee2211;
+    border-left: 5px solid var(--color-primary);
 }
 
 .description-item:nth-child(odd) {
-    background-color: #f7f7f7;
+    background-color: var(--color-background-dark);
 }
 
 .description-item h3{
@@ -168,6 +191,7 @@ p {
 
 /*---- Rodapé --*/
 footer{
+    color: var(--color-text);
     text-align: center;
     margin: 2.5rem 0;
 }
